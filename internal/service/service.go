@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
-	"llm-command-gateway/internal/auth"
-	"llm-command-gateway/internal/domain"
-	"llm-command-gateway/internal/executor"
-	"llm-command-gateway/internal/hooks"
-	"llm-command-gateway/internal/policy"
+	"llm-command-executor/internal/auth"
+	"llm-command-executor/internal/domain"
+	"llm-command-executor/internal/executor"
+	"llm-command-executor/internal/hooks"
+	"llm-command-executor/internal/policy"
 )
 
 type Store interface {

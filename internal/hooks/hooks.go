@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"sync/atomic"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 type Phase string

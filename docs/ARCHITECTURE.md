@@ -2,12 +2,12 @@
 
 ## Design Goal
 
-The gateway lets an LLM execute operational commands without granting arbitrary shell access. The model can only call named tools that map to configured command templates.
+The executor lets an LLM execute operational commands without granting arbitrary shell access. The model can only call named tools that map to configured command templates.
 
 ## Runtime Flow
 
 1. REST or MCP receives a request.
-2. The bearer token or `LCG_MCP_TOKEN` authenticates the caller.
+2. The bearer token or `LCE_MCP_TOKEN` authenticates the caller.
 3. RBAC checks the caller role against the target server and command.
 4. The command template validates and renders arguments.
 5. Hooks run before validation, before execution, after execution, and on errors.

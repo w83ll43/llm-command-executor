@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"llm-command-gateway/internal/app"
-	"llm-command-gateway/internal/httpapi"
+	"llm-command-executor/internal/app"
+	"llm-command-executor/internal/httpapi"
 )
 
 func main() {

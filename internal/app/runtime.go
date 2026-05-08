@@ -3,12 +3,12 @@ package app
 import (
 	"log/slog"
 
-	"llm-command-gateway/internal/auth"
-	"llm-command-gateway/internal/config"
-	"llm-command-gateway/internal/executor"
-	"llm-command-gateway/internal/hooks"
-	"llm-command-gateway/internal/service"
-	"llm-command-gateway/internal/store"
+	"llm-command-executor/internal/auth"
+	"llm-command-executor/internal/config"
+	"llm-command-executor/internal/executor"
+	"llm-command-executor/internal/hooks"
+	"llm-command-executor/internal/service"
+	"llm-command-executor/internal/store"
 )
 
 type Runtime struct {

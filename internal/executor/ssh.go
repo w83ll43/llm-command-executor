@@ -11,7 +11,7 @@ import (
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/knownhosts"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 type SSHConfig struct {

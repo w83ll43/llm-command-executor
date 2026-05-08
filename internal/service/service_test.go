@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"llm-command-gateway/internal/auth"
-	"llm-command-gateway/internal/domain"
-	"llm-command-gateway/internal/executor"
-	"llm-command-gateway/internal/hooks"
-	"llm-command-gateway/internal/store"
+	"llm-command-executor/internal/auth"
+	"llm-command-executor/internal/domain"
+	"llm-command-executor/internal/executor"
+	"llm-command-executor/internal/hooks"
+	"llm-command-executor/internal/store"
 )
 
 type fakeExecutor struct{}

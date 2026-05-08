@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 func TestAuthenticateTokenHash(t *testing.T) {

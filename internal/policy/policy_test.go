@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 func TestRenderAllowsValidatedTemplateArgs(t *testing.T) {

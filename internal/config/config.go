@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"llm-command-gateway/internal/auth"
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/auth"
+	"llm-command-executor/internal/domain"
 )
 
 type Config struct {

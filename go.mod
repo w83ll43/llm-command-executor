@@ -1,4 +1,4 @@
-module llm-command-gateway
+module llm-command-executor
 
 go 1.21
 

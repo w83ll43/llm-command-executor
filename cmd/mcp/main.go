@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"os"
 
-	"llm-command-gateway/internal/app"
-	"llm-command-gateway/internal/mcpstdio"
+	"llm-command-executor/internal/app"
+	"llm-command-executor/internal/mcpstdio"
 )
 
 func main() {
@@ -20,9 +20,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	token := os.Getenv("LCG_MCP_TOKEN")
+	token := os.Getenv("LCE_MCP_TOKEN")
 	if token == "" {
-		logger.Warn("LCG_MCP_TOKEN is empty; MCP tools that require auth will fail")
+		logger.Warn("LCE_MCP_TOKEN is empty; MCP tools that require auth will fail")
 	}
 
 	server := mcpstdio.NewServer(runtime.Service, token, logger)

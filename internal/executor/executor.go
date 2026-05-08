@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sync"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 var ErrOutputLimitExceeded = errors.New("output limit exceeded")

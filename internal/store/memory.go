@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 type MemoryStore struct {

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"llm-command-gateway/internal/domain"
+	"llm-command-executor/internal/domain"
 )
 
 var (

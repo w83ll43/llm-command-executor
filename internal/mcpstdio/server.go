@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"strings"
 
-	"llm-command-gateway/internal/domain"
-	"llm-command-gateway/internal/service"
+	"llm-command-executor/internal/domain"
+	"llm-command-executor/internal/service"
 )
 
 type Server struct {
@@ -70,7 +70,7 @@ func (s *Server) handle(ctx context.Context, msg rpcMessage) rpcMessage {
 				"tools": map[string]any{},
 			},
 			"serverInfo": map[string]string{
-				"name":    "llm-command-gateway",
+				"name":    "llm-command-executor",
 				"version": "0.1.0",
 			},
 		}

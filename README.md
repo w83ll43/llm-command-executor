@@ -1,13 +1,13 @@
-# LLM Command Gateway
+# LLM Command Executor
 
-LLM Command Gateway is a controlled remote command execution platform designed for model-driven operations. It exposes the same command service through REST and an MCP stdio server, while enforcing token authentication, RBAC, parameterized command allowlists, output limits, timeouts, hooks, and audit records.
+LLM Command Executor is a controlled remote command execution platform designed for model-driven operations. It exposes the same command service through REST and an MCP stdio server, while enforcing token authentication, RBAC, parameterized command allowlists, output limits, timeouts, hooks, and audit records.
 
 The project intentionally does not expose a raw shell endpoint. Callers select a `command_key` and provide typed arguments that must pass the configured validators.
 
 ## Current Scope
 
 - Go implementation targeting Linux servers.
-- REST gateway in `cmd/gateway`.
+- REST service in `cmd/executor`.
 - MCP stdio server in `cmd/mcp`.
 - SSH executor using managed private keys.
 - In-memory runtime store seeded from JSON config.
@@ -19,7 +19,7 @@ The project intentionally does not expose a raw shell endpoint. Callers select a
 ```powershell
 go mod tidy
 go test ./...
-go run ./cmd/gateway -config config.example.json
+go run ./cmd/executor -config config.example.json
 ```
 
 The example config uses the development token `dev-token-change-me`.
@@ -46,7 +46,7 @@ Invoke-RestMethod `
 Run the MCP stdio server:
 
 ```powershell
-$env:LCG_MCP_TOKEN = "dev-token-change-me"
+$env:LCE_MCP_TOKEN = "dev-token-change-me"
 go run ./cmd/mcp -config config.example.json
 ```
 
