@@ -1,0 +1,64 @@
+{
+  "http": {
+    "addr": ":8080"
+  },
+  "ssh": {
+    "known_hosts_path": "",
+    "insecure_skip_host_key_check": true
+  },
+  "servers": [
+    {
+      "id": "dev-linux-01",
+      "name": "Development Linux Server",
+      "address": "127.0.0.1:22",
+      "user": "deploy",
+      "private_key_path": "C:/Users/you/.ssh/id_ed25519",
+      "group": "dev"
+    }
+  ],
+  "commands": [
+    {
+      "key": "systemctl_status",
+      "description": "Check a whitelisted service status",
+      "executable": "/usr/bin/systemctl",
+      "args": ["status", "{{service}}"],
+      "validators": {
+        "service": {
+          "type": "enum",
+          "values": ["nginx", "mysql", "redis"]
+        }
+      },
+      "timeout_seconds": 10,
+      "max_output_bytes": 65536
+    },
+    {
+      "key": "disk_usage",
+      "description": "Show disk usage for a whitelisted path",
+      "executable": "/usr/bin/df",
+      "args": ["-h", "{{path}}"],
+      "validators": {
+        "path": {
+          "type": "enum",
+          "values": ["/", "/var", "/data"]
+        }
+      },
+      "timeout_seconds": 10,
+      "max_output_bytes": 65536
+    }
+  ],
+  "tokens": [
+    {
+      "id": "dev-token",
+      "name": "Local development token",
+      "token": "dev-token-change-me",
+      "role": "operator"
+    }
+  ],
+  "policies": [
+    {
+      "role": "operator",
+      "server_groups": ["dev"],
+      "command_keys": ["systemctl_status", "disk_usage"]
+    }
+  ]
+}

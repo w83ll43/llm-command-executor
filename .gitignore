@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+*.exe
+*.test
+coverage.out
+bin/
+dist/
+tmp/
+.env
+config.local.json
